@@ -1,0 +1,10 @@
+<h2 class="center">Elige tu universidad</h2>
+<hr />
+<div class="cards-column">
+  <div class="card card-img" *ngFor="let u of universidades">
+    <img class="card-img-top" [src]="u.logo" [alt]="u.nombre" />
+    <div class="card-body">
+      <h5 class="card-title">{{ u.nombre }}</h5>
+    </div>
+  </div>
+</div>
