@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCoffee, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-carrera',
@@ -7,7 +7,7 @@ import { faCoffee, faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./carrera.component.css'],
 })
 export class CarreraComponent implements OnInit {
-  //remover font awesome faSearch = faSearch;
+  faSearch = faSearch;
 
   constructor() {}
 
