@@ -9,12 +9,20 @@ export class CargarUniversidadesService {
       nombre: 'ITLA',
       logo: 'assets/img/itla.png',
       tipoCalificacion: 'numeros',
-      // carreras: [
-      //   {
-      //     nombreCarrera: 'Desarollo de software',
-      //     materias: [{ nombreMateria: '', creditos: 5 }],
-      //   },
-      // ],
+      carreras: [
+        {
+          nombreCarrera: 'Desarollo de software',
+          materias: [
+            { nombreMateria: '', creditos: 5, calificacion: 'A' },
+            { nombreMateria: '', creditos: 5, calificacion: 'A' },
+            { nombreMateria: '', creditos: 5, calificacion: 'A' },
+            { nombreMateria: '', creditos: 5, calificacion: 'A' },
+            { nombreMateria: '', creditos: 5, calificacion: 'A' },
+            { nombreMateria: '', creditos: 5, calificacion: 'A' },
+            { nombreMateria: '', creditos: 5, calificacion: 'A' },
+          ],
+        },
+      ],
     },
     {
       nombre: 'UNIBE',
@@ -24,6 +32,11 @@ export class CargarUniversidadesService {
     {
       nombre: 'INTEC',
       logo: 'assets/img/intec.png',
+      tipoCalificacion: 'numeros',
+    },
+    {
+      nombre: 'APEC',
+      logo: 'assets/img/apec.png',
       tipoCalificacion: 'numeros',
     },
   ];
