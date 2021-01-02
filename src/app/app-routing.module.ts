@@ -7,6 +7,7 @@ import { CarreraComponent } from './components/carrera/carrera.component';
 const routes: Routes = [
   { path: 'inicio', component: UniversidadComponent },
   { path: 'carreras', component: CarreraComponent },
+  { path: 'calculadora', component: CalculadoraComponent },
   { path: '**', component: UniversidadComponent },
 ];
 
