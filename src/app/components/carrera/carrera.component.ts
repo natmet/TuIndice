@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { CollegeService } from 'src/app/shared/models/college-service';
+import { Career } from 'src/app/shared/models/universidades.model';
 
 @Component({
   selector: 'app-carrera',
@@ -7,9 +9,14 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./carrera.component.css'],
 })
 export class CarreraComponent implements OnInit {
+  @Input() collegeID: number;
   faSearch = faSearch;
 
-  constructor() {}
+  careers: Array<Career>
 
-  ngOnInit(): void {}
+  constructor(@Inject('CollegeService') private collegeService: CollegeService) {}
+
+  ngOnInit(): void {
+    this.careers = this.collegeService.getCareers();
+  }
 }
