@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,9 +7,14 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./carrera.component.css'],
 })
 export class CarreraComponent implements OnInit {
+  @Output() onFinishStep = new EventEmitter();
   faSearch = faSearch;
 
   constructor() {}
 
   ngOnInit(): void {}
+
+  finishStep() {
+    this.onFinishStep.emit();
+  }
 }

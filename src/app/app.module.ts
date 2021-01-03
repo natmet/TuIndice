@@ -9,6 +9,9 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { UniversidadComponent } from './components/universidad/universidad.component';
 import { CarreraComponent } from './components/carrera/carrera.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { StepperComponent } from './material/stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -18,8 +21,15 @@ import { CarreraComponent } from './components/carrera/carrera.component';
     FooterComponent,
     UniversidadComponent,
     CarreraComponent,
+    StepperComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
