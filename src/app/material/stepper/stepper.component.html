@@ -1,0 +1,13 @@
+<!-- prettier-ignore -->
+
+<mat-horizontal-stepper #stepper [selectedIndex]="actualStep" linear>
+  <mat-step  label="Selecciona Tu Universidad" [completed]="pasos[0]">
+    <app-universidad (onFinishStep)="pasoSiguiente(0,stepper)"></app-universidad>
+  </mat-step>
+  <mat-step  label="Selecciona tu Carrera" [completed]="pasos[1]">
+    <app-carrera (onFinishStep)="pasoSiguiente(1,stepper)"></app-carrera>
+  </mat-step>
+  <mat-step  label="Calcula Tu Indice" [completed]="pasos[2]">
+    <app-calculadora (onFinishStep)="pasoSiguiente(2,stepper)"></app-calculadora>
+  </mat-step>
+</mat-horizontal-stepper>
