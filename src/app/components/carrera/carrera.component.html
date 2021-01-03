@@ -3,7 +3,10 @@
   <h1>Elige tu carrera</h1>
   <div id="caja" class="input-group">
     <div class="boxContainer">
-      <input type="text" placeholder="Ingenieria En Software" class="search" />
+      <input type="text" list="careers" placeholder="Ingenieria En Software" class="search"/>
+      <datalist id="careers" >
+        <option class="datalist-options" *ngFor="let career of careers">{{career.name}}</option>
+      </datalist>
     </div>
   </div>
 </form>
