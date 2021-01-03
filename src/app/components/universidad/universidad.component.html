@@ -1,7 +1,11 @@
 <h2 class="center">Elige tu universidad</h2>
 <hr />
-<div class="cards-column" [routerLink]="['/carreras']">
-  <div class="card card-img" *ngFor="let u of universidades">
+<div class="cards-column">
+  <div
+    (click)="finishStep()"
+    class="card card-img"
+    *ngFor="let u of universidades"
+  >
     <img class="card-img-top" [src]="u.logo" [alt]="u.nombre" />
     <div class="card-body">
       <h5 style="text-align: center; font-size: 23px" class="card-title">
