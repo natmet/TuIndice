@@ -1,4 +1,11 @@
-import { Component, EventEmitter, OnInit, Output, Inject, Input} from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  OnInit,
+  Output,
+  Inject,
+  Input,
+} from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { CollegeService } from 'src/app/shared/models/college-service';
 import { Career } from 'src/app/shared/models/universidades.model';
@@ -12,9 +19,11 @@ export class CarreraComponent implements OnInit {
   @Input() collegeID: number;
   @Output() onFinishStep = new EventEmitter();
   faSearch = faSearch;
-  careers: Array<Career>
+  careers: Array<Career>;
 
-  constructor(@Inject('CollegeService') private collegeService: CollegeService) {}
+  constructor(
+    @Inject('CollegeService') private collegeService: CollegeService
+  ) {}
 
   ngOnInit(): void {
     this.careers = this.collegeService.getCareers();
@@ -22,6 +31,5 @@ export class CarreraComponent implements OnInit {
 
   finishStep() {
     this.onFinishStep.emit();
-
   }
 }
