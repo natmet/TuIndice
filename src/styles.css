@@ -1,8 +1,3 @@
-.footer {
-  position: absolute;
-  bottom: 2px;
-  width: 100%;
-}
 .center {
   margin-top: 30px;
   text-align: center;
@@ -31,4 +26,13 @@ body {
 body {
   margin: 0;
   font-family: "Helvetica Neue", sans-serif;
+  background-image: "./assets/img/logo-app.png";
+}
+.mat-step-header.cdk-keyboard-focused,
+.mat-step-header.cdk-program-focused,
+.mat-step-header:hover {
+  background-color: #22aeebc7;
+}
+.mat-step-text-label {
+  font-size: 17px;
 }
