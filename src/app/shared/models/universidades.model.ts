@@ -3,6 +3,7 @@ export interface College {
     name: string;
     logo: string;
     scoringSystem: string;
+    scores: Array<Score>
     careers: Array<Career>;
 }
 
@@ -17,4 +18,9 @@ export interface Subject {
     name: string;
     credits: number;
     score: number;
+}
+
+export interface Score {
+    literal: string;
+    value: number;
 }
