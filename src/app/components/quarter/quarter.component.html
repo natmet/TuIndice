@@ -1,0 +1,25 @@
+<mat-card>
+    <h1>Cuatrimestre {{ index + 1}}</h1>
+    <ng-container [formGroup]="quarterForm">
+            <div id="subject-row" *ngFor="let subjectRow of subjectRows.controls">
+                <ng-container [formGroup]="subjectRow"> 
+                    <mat-form-field appearance="fill" style="width: 40%">
+                        <mat-select formControlName="subjectCredits">
+                            <mat-option *ngFor="let subject of availableSubjects" value="{{subject.credits}}">{{subject.name}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" style="width: 20%" id="subjectScore" matBadge=" x " matBadgeColor="warn">
+                        <mat-select formControlName="subjectScore">
+                            <mat-option *ngFor="let score of scoreRange" value="{{score.value}}">{{score.literal}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </ng-container>
+            </div>
+    </ng-container>
+    
+    <div (click)="agregarMateria()">
+        <button mat-fab color="primary" type="button">
+            <span class="material-icons">add</span>
+        </button>
+    </div>
+</mat-card>

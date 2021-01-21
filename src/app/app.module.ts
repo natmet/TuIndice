@@ -14,7 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { StepperComponent } from './material/stepper/stepper.component';
 import { SugerenciasComponent } from './components/sugerencias/sugerencias.component';
-import { FormsModule } from '@angular/forms';
+import { QuarterComponent } from './components/quarter/quarter.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     CarreraComponent,
     StepperComponent,
     SugerenciasComponent,
+    QuarterComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FormsModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [{ provide: 'CollegeService', useClass: MockCollegeService }],
 
