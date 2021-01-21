@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CargarUniversidadesService } from 'src/app/services/cargar-universidades.service';
+
 @Component({
   selector: 'app-universidad',
   templateUrl: './universidad.component.html',

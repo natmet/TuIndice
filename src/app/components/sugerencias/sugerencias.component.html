@@ -1,0 +1,24 @@
+<h2>Formulario De Sugerencias</h2>
+<form #formSugerencia="ngForm" (ngSubmit)="enviarForm(formSugerencia.value)">
+  <div>
+    <label>
+      Nombre:
+      <input name="nombre" ngModel />
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Correo:
+      <input name="correo" ngModel />
+    </label>
+  </div>
+
+  <div>
+    <label>
+      Mensaje:
+      <textarea type="textarea" name="mensaje" ngModel></textarea>
+    </label>
+  </div>
+  <button type="submit">Enviar Sugerencia</button>
+</form>
