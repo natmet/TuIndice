@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SugerenciasModalComponent } from './sugerencias-modal.component';
+import { SugerenciasComponent } from './sugerencias.component';
 
-describe('SugerenciasModalComponent', () => {
-  let component: SugerenciasModalComponent;
-  let fixture: ComponentFixture<SugerenciasModalComponent>;
+describe('SugerenciasComponent', () => {
+  let component: SugerenciasComponent;
+  let fixture: ComponentFixture<SugerenciasComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SugerenciasModalComponent ]
+      declarations: [ SugerenciasComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SugerenciasModalComponent);
+    fixture = TestBed.createComponent(SugerenciasComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

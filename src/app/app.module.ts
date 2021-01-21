@@ -13,6 +13,8 @@ import { MockCollegeService } from 'src/app/services/mock-college.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { StepperComponent } from './material/stepper/stepper.component';
+import { SugerenciasComponent } from './components/sugerencias/sugerencias.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,7 @@ import { StepperComponent } from './material/stepper/stepper.component';
     UniversidadComponent,
     CarreraComponent,
     StepperComponent,
+    SugerenciasComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +33,7 @@ import { StepperComponent } from './material/stepper/stepper.component';
     FontAwesomeModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
   ],
   providers: [{ provide: 'CollegeService', useClass: MockCollegeService }],
 
