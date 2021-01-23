@@ -2,18 +2,17 @@
 <form class="center">
   <h1>Elige tu carrera</h1>
   <div id="caja" class="input-group">
-    <div class="boxContainer" (select)="finishStep()">
-      <input
+    <div class="boxContainer" >
+      <input 
+        mat-input
         type="text"
-        list="careers"
         placeholder="Ingenieria En Software"
         class="search"
+        [matAutocomplete]="auto"
       />
-      <datalist id="careers">
-        <option class="datalist-options" *ngFor="let career of careers">
-          {{ career.name }}
-        </option>
-      </datalist>
+      <mat-autocomplete #auto="matAutocomplete" (optionSelected)="finishStep()">
+        <mat-option *ngFor="let career of careers" [value]="career.name">{{ career.name }}</mat-option>
+      </mat-autocomplete>
     </div>
   </div>
 </form>
