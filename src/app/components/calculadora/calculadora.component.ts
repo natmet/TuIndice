@@ -23,20 +23,14 @@ export class CalculadoraComponent implements OnInit {
     this.subjects = this.collegeService.getSubjects(this.careerID);
     this.college = this.collegeService.getColleges()[0];
     console.log(this.college.scores);
-    this.periods = [1,2,3,4,5];
+    this.periods = [1];
   }
 
-  agregarMateria(numero: number) {
-    this.inputs.push(numero);
+  addQuarter(): void{
+    this.periods.push(this.periods.length);
   }
 
-  eliminarMateria(indice: number) {
-    if (indice < 1) {
-      return;
-    } else this.inputs.splice(indice, 1);
-  }
-
-  finishStep() {
+  finishStep(): void {
     this.onFinishStep.emit();
   }
 }
